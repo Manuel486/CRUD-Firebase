@@ -1,0 +1,77 @@
+<form class="item" #f="ngForm" (ngSubmit)="f.form.valid && guardarPersona()">
+  <input
+    type="text"
+    name="usuario"
+    id="usuario"
+    placeholder="Usuario"
+    [(ngModel)]="usuario.usuario"
+    required
+  />
+  <input
+    type="text"
+    name="rol"
+    id="rol"
+    placeholder="Rol"
+    [(ngModel)]="usuario.rol"
+    required
+  />
+  <input
+    type="text"
+    name="email"
+    id="email"
+    placeholder="Email"
+    [(ngModel)]="usuario.email"
+    required
+  />
+  <input
+    type="text"
+    name="nombre"
+    id="nombre"
+    placeholder="Nombre"
+    [(ngModel)]="usuario.nombre"
+    required=""
+  />
+  <input
+    type="text"
+    name="apellidos"
+    id="apellido"
+    placeholder="Apellido"
+    class="form-control"
+    [(ngModel)]="usuario.apellido"
+    required=""
+  />
+  <input
+    type="text"
+    name="telefono"
+    id="telefono"
+    placeholder="Telefono"
+    [(ngModel)]="usuario.telefono"
+    required
+  />
+  <input
+    type="text"
+    name="ciudad"
+    id="ciudad"
+    placeholder="Ciudad"
+    [(ngModel)]="usuario.ciudad"
+    required
+  />
+  <input
+    type="text"
+    name="clave"
+    id="clave"
+    placeholder="Clave"
+    [(ngModel)]="usuario.clave"
+    required
+  />
+
+  <button type="submit" style="cursor: pointer" *ngIf="index == null;else editar">
+    Agregar
+  </button>
+  <ng-template #editar>
+    <button type="submit" style="cursor: pointer">
+      Editar
+    </button>
+  </ng-template>
+
+</form>
